@@ -1,19 +1,41 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Index from '../views/Index.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Index from '../views/Index.vue';
+import Login from '../views/Login.vue'
+import NotFound from '../component/error/NotFound.vue'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Index',
     component: Index
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '*',
+    name: 'NotFound',
+    component: NotFound
   }
 ]
 
 const router = new VueRouter({
   routes
-})
+});
 
-export default router
+
+
+router.beforeEach((to, from, next) => {
+  if(to.meta.title) {
+    document.title = to.meta.title;
+  }
+  next();
+});
+
+
+export default router;
