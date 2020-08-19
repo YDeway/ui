@@ -14,6 +14,15 @@ Vue.config.productionTip = false;
 Axios.defaults.baseURL = 'http://localhost/';
 Vue.prototype.$http = Axios;
 
+Axios.interceptors.request.use(config => {
+  const token = window.sessionStorage.getItem('token');
+  if(token) {
+    config.headers.Authorization = window.sessionStorage.getItem('token');
+  }
+  return config;
+});
+
+
 Vue.use(Element);
 
 new Vue({
