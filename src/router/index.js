@@ -42,9 +42,9 @@ router.beforeEach((to, from, next) => {
   if(to.meta.title) {
     document.title = to.meta.title;
   }
-  if(to.path === '/login' && window.sessionStorage.getItem('token')) {
-    router.push('/blank');
-  }
+  // if(to.path === '/login' && window.sessionStorage.getItem('token')) {
+  //   router.push('/blank');
+  // }
   next();
 });
 
