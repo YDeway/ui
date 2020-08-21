@@ -6,7 +6,7 @@ import Axios from 'axios';
 
 import 'element-ui/lib/theme-chalk/index.css'
 import '../src/assets/css/global.css'
-
+import 'animate.css'
 
 
 Vue.config.productionTip = false;
