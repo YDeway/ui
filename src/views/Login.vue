@@ -63,7 +63,7 @@ function login() {
             const {data: resp} = await this.$http.post('user/login', {userId: this.user.username, password:this.user.password});
             aswitch.loginLoading = false;
             if(resp.code === 200) {
-                window.sessionStorage.setItem('token', resp.data.token);
+                window.localStorage.setItem('token', resp.data.token);
                 this.$router.push('/');
             } 
             else {
