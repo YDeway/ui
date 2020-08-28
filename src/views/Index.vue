@@ -17,8 +17,8 @@
 					</router-link>
                 </span>
                 <span class="item-banner">
-                    <router-link class="icon-word" :to="'/'">
-						<img class="icon-img" src="../../public/icon/home.svg" alt="home"> 主页
+                    <router-link class="icon-word" :to="'/editor'">
+						<img class="icon-img" src="../../public/icon/home.svg" alt="home"> 编辑
 					</router-link>
                 </span>
                 <span class="item-banner">

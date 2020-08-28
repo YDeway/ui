@@ -11,7 +11,7 @@ import 'animate.css'
 
 Vue.config.productionTip = false;
 
-Axios.defaults.baseURL = 'http://localhost/';
+Axios.defaults.baseURL = 'https://www.touchim.cn/';
 Vue.prototype.$http = Axios;
 
 Axios.interceptors.request.use(config => {

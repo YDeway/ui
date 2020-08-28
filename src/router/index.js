@@ -4,6 +4,7 @@ import Index from '../views/Index.vue';
 import Login from '../views/Login.vue'
 import NotFound from '../component/error/NotFound.vue'
 import Blank from '../component/base/Blank.vue'
+import Editor from '../views/Editor.vue'
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
     path: '*',
     name: 'NotFound',
     component: NotFound
+  },
+  {
+    path: '/editor',
+    name: 'Editor',
+    component: Editor
   }
 ]
 
