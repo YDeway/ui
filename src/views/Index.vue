@@ -2,11 +2,12 @@
     <div class="main-container" ref="main-container" @scroll="scroll">
 		<div class="side-left">
 			<div class="item-introduce">
-                <!-- <div class="avatar"> -->
-                    <el-avatar :size="80" @error="errorHandler">
+                <el-popover placement="right-end" title="标题" width="200" trigger="hover" 
+                content="">
+                    <el-avatar :size="80" @error="errorHandler" slot="reference">
                         <img src="../../public/img/catandmouse.jpg" alt="avatar">
                     </el-avatar>
-                <!-- </div> -->
+                </el-popover>
             </div>
 		</div>
 		<div class="header">
@@ -44,7 +45,7 @@
 		    <a href="https://beian.miit.gov.cn/" class="beian" title="备案信息" target="_blank">蜀ICP备19007401号-1</a>
 		</div>
 		<div class="side-right">
-			side-right
+
 		</div>
 		
 		<li class="back-top" @click="toTop" v-show="top"/>
@@ -204,8 +205,10 @@ function scroll(event) {
         .el-avatar{
             margin-top: 18px;
         }
+        .el-avatar:hover{
+            cursor: pointer;
+        }
     }
-
 }
 .content-body{
 	width: 55%;
